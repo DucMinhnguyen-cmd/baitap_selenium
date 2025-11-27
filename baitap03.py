@@ -17,13 +17,13 @@ ul_tags= driver.find_elements(By.TAG_NAME, "ul")
 print(len(ul_tags))
 
 #chon the ul th 21
-ul_painters= ul_tags[20] #list start with index=0
+ul_painters= ul_tags[19] #list start with index=0
 
 #lay ra tat ca <li> thuoc ul_painters
 li_tags= ul_painters.find_elements(By.TAG_NAME, "li")
 
 #tao danh sach cac url
-links=[tag.find_element(By.TAG_NAME, "a").get_attribute("herf") for tag in li_tags]
+links=[tag.find_element(By.TAG_NAME, "a").get_attribute("href") for tag in li_tags]
 
 #tao danh sach cac url
 titles= [tag.find_element(By.TAG_NAME,"a").get_attribute("title") for tag in li_tags]
